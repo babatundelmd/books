@@ -1,13 +1,22 @@
 {
-    "post": [
-        {
-            "id": 1,
-            "author": "Chinua Achebe",
-            "country": "Nigeria",
-            "language": "English",
-            "pages": 209,
-            "title": "Things Fall Apart",
-            "year": 1958
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "author": "Chinua Achebe",
+      "country": "Nigeria",
+      "language": "English",
+      "pages": 209,
+      "title": "Things Fall Apart",
+      "year": 1958
+    },
+    {
+      "id": 2,
+      "author": "Chimamanda Adichie",
+      "country": "Nigeria",
+      "language": "English",
+      "pages": 900,
+      "title": "Purple Hisbiscus",
+      "year": "2021-07-08"
+    }
+  ]
 }

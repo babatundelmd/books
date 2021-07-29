@@ -69,22 +69,22 @@
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
-            <tr>
+            <tr *ngFor="let book of books$">
               <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
                   <div>
                     <div class="text-sm font-medium text-gray-900">
-                      Author
+                      {{book.author}}
                     </div>
                     <div class="text-sm text-gray-500">
-                   Title
+                   {{book.title}}
                     </div>
                   </div>
                 </div>
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-sm text-gray-900">Country</div>
-                <div class="text-sm text-gray-500">Language</div>
+                <div class="text-sm text-gray-900">{{book.country}}</div>
+                <div class="text-sm text-gray-500">{{book.language}}</div>
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
                 <span
@@ -99,11 +99,11 @@
                     text-green-800
                   "
                 >
-              Pages
+              {{book.pages}}
                 </span>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-               Pages
+               {{book.year}}
               </td>
               <td
                 class="
@@ -115,6 +115,7 @@
                 "
               >
                 <a href="#" class="text-indigo-600 hover:text-indigo-900"
+                [routerLink]="['/update', book.id]"
                   >Edit</a
                 >
               </td>
@@ -129,6 +130,7 @@
                 "
               >
                 <a href="#" class="text-red-600 hover:text-indigo-900"
+               (click)="onDelete(book.id)"
                   >Delete</a
                 >
               </td>
